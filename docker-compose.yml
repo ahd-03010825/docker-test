@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  ssh_client:
+    build: ./ubuntu_with_ssh_client
+    depends_on:
+      - ssh_server
+
+  ssh_server:
+    build: ./ubuntu_with_ssh
